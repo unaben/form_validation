@@ -4,6 +4,7 @@ import FormInput from "./components/formInput/FormInput.jsx";
 import useInput from "./components/hooks/useInput";
 
 const App = () => {
+  const [display, setDisplay] = useState(false);
   const [values, setValues] = useState({
     username: "",
     email: "",
@@ -20,18 +21,28 @@ const App = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setValues({
+      username: "",
+      email: "",
+      birthday: "",
+      password: "",
+      confirmPassword: "",
+    });
+    setDisplay(false);
   };
   return (
     <div className="app">
       <form onSubmit={handleSubmit}>
         <h1>Register</h1>
-        {inputData.map((data) => {
+        {inputData.map((data, index) => {
           return (
             <FormInput
-              key={data.id}
+              key={index}
               {...data}
               value={values[data.name]}
               handleChange={handleChange}
+              display={display}
+              setDisplay={setDisplay}
             />
           );
         })}

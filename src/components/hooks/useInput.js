@@ -1,7 +1,6 @@
 const useInput = (values) => {
   const inputData = [
     {
-      id: 1,
       name: "username",
       type: "text",
       placeholder: "Username",
@@ -11,7 +10,6 @@ const useInput = (values) => {
       pattern: "^[A-Za-z0-9]{3,16}$",
     },
     {
-      id: 2,
       name: "email",
       type: "email",
       placeholder: "Email",
@@ -20,14 +18,12 @@ const useInput = (values) => {
       required: true,
     },
     {
-      id: 3,
       name: "birthday",
       type: "date",
       placeholder: "Birthday",
       label: "Birthday",
     },
     {
-      id: 4,
       name: "password",
       type: "password",
       placeholder: "Password",
@@ -39,7 +35,6 @@ const useInput = (values) => {
         "^(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,20}$",
     },
     {
-      id: 5,
       name: "confirmPassword",
       type: "password",
       placeholder: "Confirm Password",
