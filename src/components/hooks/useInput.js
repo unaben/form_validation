@@ -1,5 +1,5 @@
 const useInput = (values) => {
-  const inputs = [
+  const inputData = [
     {
       id: 1,
       name: "username",
@@ -15,10 +15,9 @@ const useInput = (values) => {
       name: "email",
       type: "email",
       placeholder: "Email",
-      errorMessage: "Email required",
+      errorMessage: "Vaild email required",
       label: "Email",
       required: true,
-      pattern: "",
     },
     {
       id: 3,
@@ -50,7 +49,7 @@ const useInput = (values) => {
       pattern: values.password,
     },
   ];
-  return [inputs];
+  return [inputData];
 };
 
 export default useInput;

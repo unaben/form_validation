@@ -11,7 +11,7 @@ const App = () => {
     password: "",
     confirmPassword: "",
   });
-  const [inputs] = useInput(values);
+  const [inputData] = useInput(values);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -25,12 +25,12 @@ const App = () => {
     <div className="app">
       <form onSubmit={handleSubmit}>
         <h1>Register</h1>
-        {inputs.map((input) => {
+        {inputData.map((data) => {
           return (
             <FormInput
-              key={input.id}
-              {...input}
-              value={values[input.name]}
+              key={data.id}
+              {...data}
+              value={values[data.name]}
               handleChange={handleChange}
             />
           );
